@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    // Repeat process 3 times
+    for (int i = 1; i <= 3; i++) {
+        std::string str1, str2;
+
+        // Prompt user for first string
+        std::cout << "Enter the first string for attempt " << i << ": ";
+        std::getline(std::cin, str1);
+
+        // Prompt the user for second string
+        std::cout << "Enter the second string for attempt " << i << ": ";
+        std::getline(std::cin, str2);
+
+        // Concatenate 
+        std::string result = str1 + str2;
+
+        // Print string
+        std::cout << "Concatenated result: " << result << std::endl << std::endl;
+    }
+
+    return 0;
+}
