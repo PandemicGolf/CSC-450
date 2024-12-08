@@ -1,0 +1,45 @@
+#include <iostream>
+
+int main() {
+    // Declare integer variables
+    int num1, num2, num3;
+
+    // Declare three integer pointers for memory allocation
+    int *ptr1, *ptr2, *ptr3;
+
+    // Ask user for input values
+    std::cout << " Please enter the first integer.: ";
+    std::cin >> num1;
+
+    std::cout << "Please enter the second integer.: ";
+    std::cin >> num2;
+
+    std::cout << "Please enter the third integer: ";
+    std::cin >> num3;
+
+    //  Alocate memory for each integer
+    ptr1 = new int;
+    ptr2 = new int;
+    ptr3 = new int;
+
+    // Store  values in alocated memory
+    *ptr1 = num1;
+    *ptr2 = num2;
+    *ptr3 = num3;
+
+    // Display contents of variables and pointers
+    std::cout << "\nThe value of number1 is: " << num1 << ", and stored at address: " << &num1 << std::endl;
+    std::cout << "The value of num2 is: " << num2 << ", and stored at address: " << &num2 << std::endl;
+    std::cout << "The value of num3 is: " << num3 << ", and stored at address: " << &num3 << std::endl;
+
+    std::cout << "\nThe value pointed to by ptr1: " << *ptr1 << ", is stored at address: " << ptr1 << std::endl;
+    std::cout << "The value pointed to by ptr2: " << *ptr2 << ", is stored at address: " << ptr2 << std::endl;
+    std::cout << "The value pointed to by ptr3: " << *ptr3 << ", is stored at address: " << ptr3 << std::endl;
+
+    // Delete dynamically allocated memory
+    delete ptr1;
+    delete ptr2;
+    delete ptr3;
+
+    return 0;
+}
